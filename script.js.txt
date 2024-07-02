@@ -1,0 +1,32 @@
+const contacts = [
+    { name: "Alice" },
+    { name: "Bob" },
+    { name: "Charlie" },
+    { name: "David" },
+    { name: "Eve" }
+];
+
+function searchContact() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const results = contacts.filter(contact => contact.name.toLowerCase().includes(input));
+    displayResults(results);
+}
+
+function displayResults(results) {
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.innerHTML = "";
+
+    results.forEach(contact => {
+        const li = document.createElement("li");
+        li.textContent = contact.name;
+        li.onclick = () => addContact(contact);
+        resultsContainer.appendChild(li);
+    });
+}
+
+function addContact(contact) {
+    const addedContacts = document.getElementById("addedContacts");
+    const li = document.createElement("li");
+    li.textContent = contact.name;
+    addedContacts.appendChild(li);
+}

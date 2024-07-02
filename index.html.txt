@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>搜索添加联系人</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>搜索并添加联系人</h2>
+        <input type="text" id="searchInput" placeholder="输入联系人名字">
+        <button onclick="searchContact()">搜索</button>
+        <ul id="results"></ul>
+        <h3>已添加联系人</h3>
+        <ul id="addedContacts"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
